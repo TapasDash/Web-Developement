@@ -11,9 +11,15 @@ class Counters extends Component {
     ],
   };
 
-  handleDelete = () => {
-    console.log("Event handler called");
+  handleDelete = (counterId) => {
+    console.log("Event handler called", counterId);
   };
+//Event handler called 1
+// counters.jsx:15 Event handler called 2
+// counters.jsx:15 Event handler called 1
+// counters.jsx:15 Event handler called 3
+// 2counters.jsx:15 Event handler called 1
+
 
   render() {
     return (
@@ -36,7 +42,8 @@ class Counters extends Component {
 }
 
 export default Counters;
-//In counter component
-//onClick={this.props.onDelete}
+
+//in counter component
+//onClick={() => this.props.onDelete(this.props.id)}
           //its the reference of handleDelete of parent component which is being passed down to its child
           //through props
