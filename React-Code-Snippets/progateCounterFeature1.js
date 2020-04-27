@@ -1,0 +1,30 @@
+//we'll create a counter feature that adds 1 every time you press the plus (+) button.
+
+import React from 'react';
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {count: 0};
+  }
+  
+  // Create the handleClick method here
+  handleClick() {
+    this.setState({ count: this.state.count+1 });
+  }
+  
+  render() {
+    return (
+      <div>
+        <h1>
+          { this.state.count }
+        </h1>
+        {/* Add an onClick event in the <button> tag */}
+        <button onClick={() => { this.handleClick() }}>+</button>
+        
+      </div>
+    );
+  }
+}
+
+export default App;
