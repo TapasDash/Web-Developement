@@ -1,0 +1,19 @@
+<form action="/create" method="POST">
+    <input type="text">
+    <input type="submit" value="Add">
+</form>
+
+/* 
+
+// Add a route method for creating items
+
+app.post('/create', (req, res) => {
+  connection.query(
+    'SELECT * FROM items',
+    (error, results) => {
+      res.render('index.ejs', {items: results});
+    }
+  );
+})
+
+*/
