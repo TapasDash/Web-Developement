@@ -1,3 +1,5 @@
+//we'll pass down data to views as an Obj having properies as a result
+
 const express = require('express');
 const mysql = require('mysql');
 const app = express();
